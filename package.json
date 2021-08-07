@@ -28,6 +28,6 @@
     "eris-reactions": "^0.1.4"
   },
   "peerDependencies": {
-    "eris": "^0.13.1"
+    "eris": "https://github.com/Brainicism/eris.git#7ff6167"
   }
 }
