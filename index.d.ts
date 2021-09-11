@@ -1,4 +1,5 @@
 import { Message, EmbedOptions, ActionRow } from 'eris';
+type EmbedGenerator = (() => Promise<Eris.EmbedOptions>);
 
 declare module 'eris-pagination' {
 
@@ -33,9 +34,9 @@ declare module 'eris-pagination' {
   /**
    * Create an Embed Paginator
    * @param message A message object emitted from a messageCreate event coming from Eris, used as an invoker. If sent by the client, the message will be edited.
-   * @param pages An array containing all embed objects 
+   * @param pages An array containing all embed objects
    * @param options An optional options object for overwriting defaults
    */
-  function createPaginationEmbed(message: Message, pages: EmbedOptions[], options?: PaginationOptions, components?: ActionRow[]): Promise<Message>;
+  function createPaginationEmbed(message: Message, pages: Array<Eris.EmbedOptions> | Array<EmbedGenerator>, options?: PaginationOptions, components?: ActionRow[]): Promise<Message>;
 
 }
