@@ -28,6 +28,6 @@
     "eris-reactions": "^0.1.4"
   },
   "peerDependencies": {
-    "eris": "^0.13.1"
+    "eris": "CaptainM777/eris"
   }
 }
